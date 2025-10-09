@@ -1,0 +1,107 @@
+/* this is the table approach v2 (preferred option) with single column */
+/* the table must have the class list-of-speakers-v2 */
+
+table.list-of-speakers-v2 tbody { border: 0; }
+table.list-of-speakers-v2 tr {  margin-bottom: 0.5em; display: table; }
+
+
+table.list-of-speakers-v2 tr td img {
+  width: 150px;
+  border-radius: 8px;
+  border: 1px solid #dddddd;
+  max-width: 50%;
+  float: left;
+  margin-right: 0.4em;
+}
+
+table.list-of-speakers-v2 tr td {
+  border-radius: 8px;
+  border: solid 1px #d2e3f5;
+  vertical-align: top;
+  background-color: white;
+  padding: 0.9em!important;
+}
+
+
+
+/* this is the table approach with two columns. Obsolete */
+
+table.list-of-speakers tbody {
+    border: 0;
+}
+table.list-of-speakers tr {
+  min-width: 248px;
+  width: 46%;
+  margin-bottom: 0.4em;
+  margin-right: 0.9em;
+  display: inline-block;
+  vertical-align: top;
+}
+table.list-of-speakers tr:nth-child(odd) {
+  /* float: left;  clear:both; */
+}
+table.list-of-speakers tr:nth-child(even) {
+  /* float: right; clear:right; */
+}
+table.list-of-speakers tr:nth-child(even) img {
+  float: left;
+  margin-right: 0.8em;
+  /* margin-left: -0.5em; margin-top: -0.5em; */
+  /*  position:relative; left:-150px; z-index: 1; */
+}
+table.list-of-speakers tr:nth-child(odd) img {
+  float: right;
+  margin-left: 0.4em;
+  /* margin-right: -0.5em; margin-top: -0.5em; */
+  /*position:relative; right:400px; z-index: 1;  */
+}
+table.list-of-speakers tr td img {
+  width: 150px;
+  border-radius: 8px;
+  border: 1px solid #dddddd;
+  max-width: 50%;
+}
+
+table.list-of-speakers tr td {
+  border-radius: 8px;
+  border: solid 1px #d2e3f5;
+  vertical-align: top;
+  background-color: white;
+  padding: 0.9em!important;
+}
+table.list-of-speakers tr td fieldset.collapse-text-fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* Obsolete style.
+after the H3 Speakers heading, 
+we expect a DIV with class="list-of-speakers"
+Inside that DIV, every speaker should come with its own DIV.
+Any images within the Speaker DIV will be considered as CV photos */
+div.list-of-speakers div {
+  clear: both;
+  margin-bottom: 8px;
+  background-color: white;
+  padding: 0.5em 1em;
+  
+  border: 1px solid #ccd;
+  overflow: auto;
+}
+div.list-of-speakers div img {
+  float: left;
+  width: 150px;
+  margin-right: 1em;
+  margin-top: 0.5em;
+} /* this is for the case that we put speakers in a 1 column table */
+table.list-of-speakers {
+  border: none!important;
+  background: none!important;
+  width: 106% !important;
+}
+
+div.list-of-speakers div p:last-child { margin-bottom:0px;
+}
+
